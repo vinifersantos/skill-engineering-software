@@ -40,7 +40,7 @@ jobs:
           python scripts/package_plugin.py --output-dir dist
 
       - name: Upload packages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: senior-software-engineer-v2
           path: |
