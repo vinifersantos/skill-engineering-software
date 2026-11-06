@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "senior-software-engineer",
+  "version": "2.0.0",
+  "description": "Portable master engineering skill for architecture, Code-First implementation, data, testing, security, agent orchestration, CI/CD, debugging and production reliability.",
+  "author": {
+    "name": "Vinicius Ferreira dos Santos",
+    "url": "https://github.com/vinifersantos"
+  },
+  "homepage": "https://github.com/vinifersantos/skill-engineering-software",
+  "repository": "https://github.com/vinifersantos/skill-engineering-software"
+}

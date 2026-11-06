@@ -1,0 +1,13 @@
+{
+  "name": "senior-software-engineer",
+  "version": "2.0.0",
+  "description": "One master engineering skill for architecture, code-first implementation, agent orchestration and production software quality.",
+  "author": {
+    "name": "Vinicius Ferreira dos Santos",
+    "url": "https://github.com/vinifersantos"
+  },
+  "repository": "https://github.com/vinifersantos/skill-engineering-software",
+  "skills": [
+    "./skills/senior-software-engineer"
+  ]
+}
