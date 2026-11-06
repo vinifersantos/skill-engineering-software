@@ -1,0 +1,6 @@
+---
+description: Apply the Senior Software Engineer master skill for software work in this repository.
+alwaysApply: true
+---
+
+For software engineering tasks in this repository, use `skills/senior-software-engineer/SKILL.md` as the canonical engineering skill. Load only the references relevant to the task. Direct Code-First execution is the default for clear, bounded tasks; use integrated Grill-Me discovery when unresolved assumptions materially affect the solution. Do not recreate separate Code-First, Harness Engineering or Grill-Me skills.

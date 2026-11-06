@@ -1,0 +1,13 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "senior-software-engineer",
+  "displayName": "Senior Software Engineer",
+  "version": "2.0.0",
+  "description": "A complete master engineering skill for AI coding agents, with Code-First implementation, bounded Grill-Me discovery, agent orchestration and production engineering playbooks.",
+  "logo": "skills/senior-software-engineer/assets/icon.svg",
+  "suggestedPrompts": [
+    "Use Senior Software Engineer to inspect this repository and propose the smallest safe implementation.",
+    "Use Senior Software Engineer to review this change for correctness, security, testing and operational risk.",
+    "Use Grill-Me discovery to challenge the assumptions in this architecture or product proposal."
+  ]
+}

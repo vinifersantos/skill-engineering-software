@@ -1,0 +1,6 @@
+---
+description: Maintain the single Senior Software Engineer master skill and its distribution manifests.
+alwaysApply: true
+---
+
+Follow the canonical repository instructions in `AGENTS.md`. The only skill entry point is `skills/senior-software-engineer/SKILL.md`. Use only relevant internal references. Do not create duplicate skills or playbooks. Keep root and host manifests synchronized, preserve relative links, update the changelog, run repository validation and report only checks actually executed.

@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "skill-engineering-software": {
+      "source": {
+        "source": "github",
+        "repo": "vinifersantos/skill-engineering-software"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "senior-software-engineer@skill-engineering-software": true
+  }
+}

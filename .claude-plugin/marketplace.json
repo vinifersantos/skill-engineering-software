@@ -1,0 +1,19 @@
+{
+  "name": "skill-engineering-software",
+  "owner": {
+    "name": "Vinicius Ferreira dos Santos",
+    "url": "https://github.com/vinifersantos"
+  },
+  "metadata": {
+    "description": "One master engineering skill for AI coding agents.",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "senior-software-engineer",
+      "source": "./",
+      "description": "A single master engineering skill with progressive, on-demand technical references.",
+      "category": "development"
+    }
+  ]
+}
