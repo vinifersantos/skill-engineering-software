@@ -1,6 +1,0 @@
----
-description: Maintain the single Senior Software Engineer master skill repository safely.
-alwaysApply: true
----
-
-Follow the canonical repository instructions in `AGENTS.md`. The master skill is `skills/senior-software-engineer/SKILL.md`; read only relevant internal references. Do not recreate separate skills or duplicate playbooks. Preserve relative links, update the changelog for meaningful behavior changes, run the documented validation commands, and report only checks actually executed.
