@@ -1,0 +1,5 @@
+interface:
+  display_name: Senior Software Engineer
+  short_description: Master engineering workflows for reliable AI-assisted software development.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg

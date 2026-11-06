@@ -37,7 +37,7 @@ Run Chat: Manage Plugin Marketplaces from the Command Palette, add the repositor
 
 ## Cursor
 
-For Cursor Teams or Enterprise, import the repository from Dashboard > Plugins & MCPs > Team Marketplaces > Add Marketplace > Import from Repo, then add the plugin and choose its installation mode. Optional Auto Refresh requires the Cursor GitHub App on the repository. For individual installs, use `python scripts/install_skill.py --agent cursor --scope user`.
+Use Customize > Plugins to add the GitHub repository as a marketplace/source and install Senior Software Engineer. Alternatively, use `npx skills@latest add vinifersantos/skill-engineering-software --skill senior-software-engineer --agent cursor`.
 
 ## Antigravity CLI and App
 
