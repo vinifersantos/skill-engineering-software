@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "senior-software-engineer",
+  "version": "2.0.0",
+  "description": "Portable master engineering skill for architecture, Code-First implementation, agent orchestration, data, testing, security, CI/CD, debugging and production reliability.",
+  "author": {
+    "name": "Vinicius Ferreira dos Santos",
+    "url": "https://github.com/vinifersantos"
+  },
+  "homepage": "https://github.com/vinifersantos/skill-engineering-software",
+  "repository": "https://github.com/vinifersantos/skill-engineering-software",
+  "keywords": [
+    "software-engineering",
+    "coding-agents",
+    "architecture",
+    "code-first",
+    "harness-engineering",
+    "multi-agent",
+    "testing",
+    "security",
+    "devops",
+    "sre"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Senior Software Engineer",
+        "shortDescription": "Master engineering skill for reliable, evidence-based software development.",
+        "longDescription": "One master skill combining Code-First implementation, bounded Grill-Me discovery, Agent Harness and orchestration, architecture, data engineering, testing, security, CI/CD, debugging, observability, SRE and disaster recovery. Detailed playbooks load on demand.",
+        "developerName": "Vinicius Ferreira dos Santos",
+        "category": "Developer tools",
+        "websiteURL": "https://github.com/vinifersantos/skill-engineering-software",
+        "brandColor": "#315B8A",
+        "logo": "./skills/senior-software-engineer/assets/icon.svg"
+      }
+    }
+  }
+}

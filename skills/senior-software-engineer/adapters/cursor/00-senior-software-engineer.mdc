@@ -1,0 +1,8 @@
+---
+description: Route software engineering work through the single Senior Software Engineer master skill.
+alwaysApply: true
+---
+
+For software engineering tasks, use the master skill at `{{SENIOR_SOFTWARE_ENGINEER_SKILL_PATH}}`. Read its `SKILL.md` and only the internal references relevant to the task. Do not duplicate its playbooks in this rule.
+
+Apply Code-First & Impact-Driven by default. Use Grill-Me discovery automatically only for unresolved high-impact assumptions; do not interview for clear bounded tasks. Use Agent Harness & Orchestration only when the current runtime actually exposes agents/tools. Preserve user changes, security boundaries and authorization. Validate with real project commands and report evidence honestly.

@@ -1,0 +1,50 @@
+name: Validate master skill and plugins
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate, test and package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check synchronized plugin versions
+        run: python scripts/sync_version.py --check
+
+      - name: Validate skill, plugin manifests and local links
+        run: python scripts/validate_repository.py
+
+      - name: Test read-only repository probe
+        run: python -m unittest discover -s skills/senior-software-engineer/scripts -p 'test_*.py' -v
+
+      - name: Test repository tooling
+        run: python -m unittest discover -s scripts -p 'test_*.py' -v
+
+      - name: Build distributable skill and plugin packages
+        run: |
+          python scripts/package_skill.py --output-dir dist
+          python scripts/package_plugin.py --output-dir dist
+
+      - name: Upload packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: senior-software-engineer-v2
+          path: |
+            dist/senior-software-engineer-v*.zip
+            dist/senior-software-engineer-plugin-v*.zip
+          if-no-files-found: error
+          retention-days: 30

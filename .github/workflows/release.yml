@@ -1,0 +1,58 @@
+name: Release Senior Software Engineer
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Validate and publish cross-host packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check synchronized versions
+        run: python scripts/sync_version.py --check
+
+      - name: Validate manifests and references
+        run: python scripts/validate_repository.py
+
+      - name: Run tests
+        run: |
+          python -m unittest discover -s skills/senior-software-engineer/scripts -p 'test_*.py' -v
+          python -m unittest discover -s scripts -p 'test_*.py' -v
+
+      - name: Verify tag and build packages
+        id: package
+        shell: bash
+        run: |
+          VERSION="$(python scripts/package_skill.py --version-only)"
+          PLUGIN_VERSION="$(python scripts/package_plugin.py --version-only)"
+          TAG="$GITHUB_REF_NAME"
+          test "$TAG" = "v$VERSION"
+          test "$VERSION" = "$PLUGIN_VERSION"
+          python scripts/package_skill.py --output-dir dist
+          python scripts/package_plugin.py --output-dir dist
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "skill_zip=dist/senior-software-engineer-v$VERSION.zip" >> "$GITHUB_OUTPUT"
+          echo "plugin_zip=dist/senior-software-engineer-plugin-v$VERSION.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            "${{ steps.package.outputs.skill_zip }}" \
+            "${{ steps.package.outputs.plugin_zip }}" \
+            --title "Senior Software Engineer ${{ steps.package.outputs.version }}" \
+            --generate-notes

@@ -1,0 +1,34 @@
+{
+  "name": "skill-engineering-software",
+  "owner": {
+    "name": "Vinicius Ferreira dos Santos",
+    "url": "https://github.com/vinifersantos"
+  },
+  "metadata": {
+    "description": "A single master engineering skill for GitHub Copilot and compatible coding agents.",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "senior-software-engineer",
+      "source": ".",
+      "description": "Master engineering skill for architecture, Code-First implementation, data, testing, security, agent orchestration, CI/CD and production reliability.",
+      "version": "2.0.0",
+      "author": {
+        "name": "Vinicius Ferreira dos Santos",
+        "url": "https://github.com/vinifersantos"
+      },
+      "repository": "https://github.com/vinifersantos/skill-engineering-software",
+      "keywords": [
+        "software-engineering",
+        "code-first",
+        "architecture",
+        "testing",
+        "security",
+        "agent-orchestration",
+        "devops",
+        "sre"
+      ]
+    }
+  ]
+}
